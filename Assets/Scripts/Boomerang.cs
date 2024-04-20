@@ -84,7 +84,5 @@ public class Boomerang : MonoBehaviour
             Damage damage = CalculateDamage();
             DamagePopup.Generate(collision.transform.position, damage.DamageValue, damage.IsCritical);
         }
-
-        Debug.Log(collision.gameObject.name);
     }
 }

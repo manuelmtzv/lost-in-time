@@ -17,6 +17,7 @@ public class BoomerangState : ScriptableObject
     public float throwTime = 1.2f;
     public float baseDamage = 10f;
     public float critMultiplier = 1.75f;
+    public int health = 200;
     public BoomerangLifeCycle state = BoomerangLifeCycle.Idle;
 
 

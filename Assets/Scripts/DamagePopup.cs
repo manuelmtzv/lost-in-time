@@ -60,8 +60,6 @@ public class DamagePopup : MonoBehaviour
             textColor.a -= fadeTime * Time.deltaTime;
             textMesh.color = textColor;
 
-            Debug.Log(alpha);
-
             if (alpha <= 0) Destroy(gameObject);
         }
     }

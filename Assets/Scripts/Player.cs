@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] float walkSpeed = 3f;
     [SerializeField] float runSpeed = 4f;
     [SerializeField] TimeFlowState timeFlowState;
+    [SerializeField] PlayerState playerState;
     private Rigidbody2D rb;
     private Animator animator;
     private PlayerInput playerInput;
@@ -34,6 +35,8 @@ public class Player : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         animator = GameObject.FindGameObjectWithTag("PlayerBody").GetComponent<Animator>();
         bodyTransform = GameObject.FindGameObjectWithTag("PlayerBody").transform;
+
+        playerState.health = playerState.maxHealth;
     }
 
     // Update is called once per frame
@@ -88,6 +91,23 @@ public class Player : MonoBehaviour
             isGrounded = false;
 
             animator.SetBool("isJumping", !isGrounded);
+        }
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        playerState.health -= damageAmount;
+
+        if (playerState.health <= 0)
+        {
+            playerState.health = 0;
+        }
+
+        Debug.Log("Player health: " + playerState.health);
+
+        if (playerState.IsDead)
+        {
+            Debug.Log("Player is dead");
         }
     }
 }
