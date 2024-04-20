@@ -13,8 +13,11 @@ public class Enemy : MonoBehaviour
     public float attackDelay = 0.4f;
     public GameObject bloodParticles;
     public SliderBar healthBar;
+    public float baseSpeed;
     private float attackDelayTimer;
     private bool canMove = true;
+    private bool isStunned = false;
+    private float stunDuration = 0.3f;
     private Player player;
     private GameObject playerObject;
 
@@ -24,7 +27,7 @@ public class Enemy : MonoBehaviour
         player = playerObject.GetComponent<Player>();
         attackDelayTimer = attackDelay;
 
-        speed = UnityEngine.Random.Range(state.minSpeed, state.maxSpeed);
+        speed = baseSpeed = UnityEngine.Random.Range(state.minSpeed, state.maxSpeed);
         health = state.health;
         damage = state.damage;
 
@@ -41,6 +44,18 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isStunned)
+        {
+            stunDuration -= Time.deltaTime;
+            speed *= 0.75f;
+
+            if (stunDuration <= 0)
+            {
+                isStunned = false;
+                speed = baseSpeed;
+            }
+        }
+
         if (canMove)
         {
             transform.position = Vector3.MoveTowards(transform.position, playerObject.transform.position, speed * Time.deltaTime);
@@ -66,6 +81,15 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(bloodParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+    }
+
+    public void Stun(float duration)
+    {
+        if (!isStunned)
+        {
+            isStunned = true;
+            stunDuration = duration;
         }
     }
 
