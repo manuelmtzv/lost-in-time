@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         player = playerObject.GetComponent<Player>();
         attackDelayTimer = attackDelay;
 
-        speed = state.speed;
+        speed = UnityEngine.Random.Range(state.minSpeed, state.maxSpeed);
         health = state.health;
         damage = state.damage;
 

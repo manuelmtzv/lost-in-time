@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class SliderBar : MonoBehaviour
 {
-    public Slider slider;
+    private Slider slider;
 
     private void Start()
     {
         slider = GetComponent<Slider>();
-
     }
 
     public void SetSliderMax(float max)
