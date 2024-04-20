@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] float runSpeed = 4f;
     [SerializeField] TimeFlowState timeFlowState;
     [SerializeField] PlayerState playerState;
+    [SerializeField] SliderBar healthBar;
     private Rigidbody2D rb;
     private Animator animator;
     private PlayerInput playerInput;
@@ -28,7 +29,6 @@ public class Player : MonoBehaviour
         get => isFacingRight;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,9 +37,9 @@ public class Player : MonoBehaviour
         bodyTransform = GameObject.FindGameObjectWithTag("PlayerBody").transform;
 
         playerState.health = playerState.maxHealth;
+        healthBar.SetSliderMax(playerState.maxHealth);
     }
 
-    // Update is called once per frame
     void Update()
     {
         horizontalMovement = playerInput.actions["Movement"].ReadValue<Vector2>().x;
@@ -97,6 +97,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         playerState.health -= damageAmount;
+        healthBar.SetSliderValue(playerState.health);
 
         if (playerState.health <= 0)
         {

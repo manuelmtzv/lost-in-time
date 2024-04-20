@@ -6,11 +6,12 @@ public class TimeFlowChanger : MonoBehaviour
 {
     public float slowMotionTimescale;
     public float timeAvailable;
-    public TextMeshProUGUI availableTimeText;
+    // public TextMeshProUGUI availableTimeText;
     public TimeFlowState timeFlowState;
     public Light2D globalLight;
     public Color slowMoColor;
     public float colorChangeDuration = 1.0f;
+    public SliderBar abilityResourceBar;
 
     private float startTimescale;
     private float startFixedDeltaTime;
@@ -26,6 +27,9 @@ public class TimeFlowChanger : MonoBehaviour
         timeFlowState.slowMo = false;
         targetColor = Color.white;
         globalLight.color = targetColor;
+
+        abilityResourceBar.SetSliderMax(timeAvailable);
+        abilityResourceBar.SetSliderValue(currentTimeAvailable);
     }
 
     void Update()
@@ -66,7 +70,7 @@ public class TimeFlowChanger : MonoBehaviour
             targetColor = Color.white;
         }
 
-        availableTimeText.text = "Time available: " + currentTimeAvailable.ToString("F2");
+        // availableTimeText.text = "Time available: " + currentTimeAvailable.ToString("F2");
 
         if (globalLight.color != targetColor)
         {
@@ -74,6 +78,8 @@ public class TimeFlowChanger : MonoBehaviour
             float t = Mathf.Clamp01(colorChangeTimer / colorChangeDuration);
             globalLight.color = Color.Lerp(globalLight.color, targetColor, t);
         }
+
+        abilityResourceBar.SetSliderValue(currentTimeAvailable);
     }
 
     private void StartSlowMotion()

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public int health;
     public int damage;
     public float attackDelay = 0.4f;
+    public GameObject bloodParticles;
     private float attackDelayTimer;
     private bool canMove = true;
     private Player player;
@@ -59,6 +60,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            Instantiate(bloodParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
