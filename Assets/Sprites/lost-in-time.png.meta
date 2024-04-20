@@ -1,0 +1,501 @@
+fileFormatVersion: 2
+guid: adb6c9985f3fa9c47b606a697a97eaf0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lost-in-time_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 191
+        width: 85
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e595761583aeaa4cb60007c79565da4
+      internalID: 369292459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 257
+        width: 15
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5577545, y: 0.14522298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4485343e8997ea542a15569b6a1a48bd
+      internalID: 1149490272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 221
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3da45ce0bc68849bb0354e50b22bdb
+      internalID: -2121310732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 236
+        width: 6
+        height: 10
+      alignment: 9
+      pivot: {x: 0.5828145, y: 0.94719696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2771e9ede48c8d847b50de9b7be245dd
+      internalID: -254919664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_4
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 234
+        width: 21
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5559867, y: 0.029026456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35dec24f168e2e478325a6adfa60d1e
+      internalID: -1852447032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_5
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 238
+        width: 6
+        height: 10
+      alignment: 9
+      pivot: {x: 0.5828145, y: 0.956514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30dced518b6819b4b899f6ea4e31f5f8
+      internalID: -937645476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_6
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 226
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5381bdd7cb1acb4abff536975a8ed99
+      internalID: -412095816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_7
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 226
+        width: 11
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.23706216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7a0affac2df884e88087e4b7aeb5db
+      internalID: -131864696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 226
+        width: 11
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4835843, y: 0.23706216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b18bf1b855a8f642a85e8601dd63f79
+      internalID: -336906261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 228
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46550933b5b88d545aacae100a1bf956
+      internalID: 1863490638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_10
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 224
+        width: 8
+        height: 10
+      alignment: 9
+      pivot: {x: 0.36413383, y: 0.95340884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246b04b43be551244833bbf12ca85045
+      internalID: 1473496799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 223
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ca7954afa28164791e2cdc21ad3106
+      internalID: -836329563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_12
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 226
+        width: 8
+        height: 10
+      alignment: 9
+      pivot: {x: 0.36413383, y: 0.9440918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744ecb9b9de3798438c17de5cbfa26d5
+      internalID: -291573319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 205
+        width: 7
+        height: 12
+      alignment: 9
+      pivot: {x: 0.41570827, y: 0.9580663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676a0d05337b90646bc69e13b34c3084
+      internalID: -338571416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_14
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 205
+        width: 7
+        height: 12
+      alignment: 9
+      pivot: {x: 0.42014423, y: 0.9580663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b26dca1e81c0e4eb29335f11c78318
+      internalID: -1399205581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_15
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 190
+        width: 10
+        height: 13
+      alignment: 9
+      pivot: {x: 0.44099578, y: 0.9610537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9d6f6ee771c9544b45e5186f1364e9
+      internalID: -22720264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_16
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 190
+        width: 10
+        height: 13
+      alignment: 9
+      pivot: {x: 0.44099578, y: 0.95627534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cac807bc90c7046b8fafac668d8e23
+      internalID: 97003264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      lost-in-time_0: 369292459
+      lost-in-time_1: 1149490272
+      lost-in-time_10: 1473496799
+      lost-in-time_11: -836329563
+      lost-in-time_12: -291573319
+      lost-in-time_13: -338571416
+      lost-in-time_14: -1399205581
+      lost-in-time_15: -22720264
+      lost-in-time_16: 97003264
+      lost-in-time_2: -2121310732
+      lost-in-time_3: -254919664
+      lost-in-time_4: -1852447032
+      lost-in-time_5: -937645476
+      lost-in-time_6: -412095816
+      lost-in-time_7: -131864696
+      lost-in-time_8: -336906261
+      lost-in-time_9: 1863490638
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
