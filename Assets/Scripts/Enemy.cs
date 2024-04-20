@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 2f;
+    public EnemyState state;
+    public float speed;
+    public int health;
+    public int damage;
     public float attackDelay = 0.4f;
     private float attackDelayTimer;
     private bool canMove = true;
@@ -18,6 +21,10 @@ public class Enemy : MonoBehaviour
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
         attackDelayTimer = attackDelay;
+
+        speed = state.speed;
+        health = state.health;
+        damage = state.damage;
     }
 
 
@@ -43,6 +50,16 @@ public class Enemy : MonoBehaviour
                 player.TakeDamage(10);
                 attackDelayTimer = attackDelay;
             }
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
