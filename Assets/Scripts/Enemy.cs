@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public int damage;
     public float attackDelay = 0.4f;
     public GameObject bloodParticles;
+    public SliderBar healthBar;
     private float attackDelayTimer;
     private bool canMove = true;
     private Player player;
@@ -26,6 +27,8 @@ public class Enemy : MonoBehaviour
         speed = state.speed;
         health = state.health;
         damage = state.damage;
+
+        healthBar.SetSliderMax(health);
     }
 
 
@@ -57,6 +60,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        healthBar.SetSliderValue(health);
 
         if (health <= 0)
         {
