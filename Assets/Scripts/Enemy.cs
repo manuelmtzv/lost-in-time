@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
     {
         int bandageDropChance = UnityEngine.Random.Range(0, 100);
 
-        if (bandageDropChance <= 10f)
+        if (bandageDropChance <= 5.0f)
         {
             Instantiate(bandage, transform.position, Quaternion.identity);
         }
