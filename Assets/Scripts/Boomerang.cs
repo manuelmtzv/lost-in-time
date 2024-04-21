@@ -33,9 +33,11 @@ public class Boomerang : MonoBehaviour
                 break;
 
             case BoomerangLifeCycle.Returning:
+                float returnForce = boomerangState.returnForce;
+
                 float distanceToStart = Vector3.Distance(transform.position, startPoint.position);
                 float lerpValue = 1f - (distanceToStart / Vector3.Distance(transform.position, startPoint.position));
-                float currentReturnForce = Mathf.Lerp(boomerangState.returnForce, 0f, lerpValue);
+                float currentReturnForce = Mathf.Lerp(timeFlowState.slowMo ? returnForce * 1.25f : returnForce, 0f, lerpValue);
                 transform.position = Vector3.MoveTowards(transform.position, startPoint.position, currentReturnForce * Time.deltaTime);
                 transform.GetChild(0).Rotate(0, 0, boomerangState.rotateForce * Time.deltaTime);
                 break;

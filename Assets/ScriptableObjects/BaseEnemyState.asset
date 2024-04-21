@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d813f3a2828cb66419c99f9bf1da9bcf, type: 3}
   m_Name: BaseEnemyState
   m_EditorClassIdentifier: 
-  minSpeed: 1.2
-  maxSpeed: 3.4
+  minSpeed: 4
+  maxSpeed: 6.4
   health: 100
   damage: 10

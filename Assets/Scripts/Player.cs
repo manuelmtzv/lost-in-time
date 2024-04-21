@@ -8,9 +8,9 @@ using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
-    public float jumpForce = 8f;
-    public float walkSpeed = 3f;
-    public float runSpeed = 4f;
+    public float jumpForce = 6.5f;
+    public float walkSpeed = 5.2f;
+    public float runSpeed = 6.8f;
     public TimeFlowState timeFlowState;
     public PlayerState playerState;
     public SliderBar healthBar;
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
     {
         if (callbackContext.performed && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, timeFlowState.slowMo ? jumpForce * 1.5f : jumpForce);
             isGrounded = false;
             canDoubleJump = true;
 

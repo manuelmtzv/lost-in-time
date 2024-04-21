@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     public SliderBar healthBar;
     public float baseSpeed;
     public GameObject bandage;
+    private Rigidbody2D rb;
     private float attackDelayTimer;
     private bool canMove = true;
     private bool isStunned = false;
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
     {
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
+        rb = GetComponent<Rigidbody2D>();
         attackDelayTimer = attackDelay;
 
         speed = baseSpeed = UnityEngine.Random.Range(state.minSpeed, state.maxSpeed);
@@ -42,21 +44,6 @@ public class Enemy : MonoBehaviour
         Vector3 difference = playerObject.transform.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotationZ - 90f);
-    }
-
-    void FixedUpdate()
-    {
-        if (isStunned)
-        {
-            stunDuration -= Time.deltaTime;
-            speed *= 0.75f;
-
-            if (stunDuration <= 0)
-            {
-                isStunned = false;
-                speed = baseSpeed;
-            }
-        }
 
         if (canMove)
         {
@@ -71,6 +58,21 @@ public class Enemy : MonoBehaviour
                 player.TakeDamage(10);
                 Instantiate(smallBloodParticles, playerObject.transform.position, Quaternion.identity);
                 attackDelayTimer = attackDelay;
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (isStunned)
+        {
+            stunDuration -= Time.deltaTime;
+            speed *= 0.75f;
+
+            if (stunDuration <= 0)
+            {
+                isStunned = false;
+                speed = baseSpeed;
             }
         }
     }
