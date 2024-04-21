@@ -14,15 +14,16 @@ public class Player : MonoBehaviour
     [SerializeField] TimeFlowState timeFlowState;
     [SerializeField] PlayerState playerState;
     [SerializeField] SliderBar healthBar;
+    public bool isGrounded;
+    private bool isRunning;
+    private bool runTrigger;
+    private bool canDoubleJump;
     private Rigidbody2D rb;
     private Animator animator;
     private PlayerInput playerInput;
     private Transform bodyTransform;
     private bool isFacingRight;
     private float horizontalMovement;
-    public bool isGrounded;
-    private bool isRunning;
-    private bool runTrigger;
 
     public bool IsFacingRight
     {
@@ -89,8 +90,14 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
+            canDoubleJump = true;
 
             animator.SetBool("isJumping", !isGrounded);
+        }
+        else if (callbackContext.performed && canDoubleJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            canDoubleJump = false;
         }
     }
 
