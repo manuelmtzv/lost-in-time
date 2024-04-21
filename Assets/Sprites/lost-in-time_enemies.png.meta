@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 40
@@ -113,19 +113,19 @@ TextureImporter:
       name: lost-in-time_enemies_1
       rect:
         serializedVersion: 2
-        x: 130
-        y: 152
+        x: 131
+        y: 132
         width: 21
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa95544948cc4314db45d0749db2d05e
-      internalID: 1945926167
+      spriteID: 58f1ba9b28b1a7849b0aadc57d7842d5
+      internalID: -1691148399
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: lost-in-time_enemies_2
       rect:
         serializedVersion: 2
-        x: 159
-        y: 152
+        x: 160
+        y: 132
         width: 23
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78bdebbee38eb154193834732b484cae
-      internalID: 1574646210
+      spriteID: 258773d092f1e9343a179b2b56f616e2
+      internalID: 2025459793
       vertices: []
       indices: 
       edges: []
@@ -155,19 +155,82 @@ TextureImporter:
       name: lost-in-time_enemies_3
       rect:
         serializedVersion: 2
-        x: 186
-        y: 152
+        x: 187
+        y: 132
         width: 23
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f007d58be136f64f9fb6757bedb4309
-      internalID: -690669497
+      spriteID: ce5bc00bdb084eb42a4db0c96432f121
+      internalID: 1446277477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_enemies_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 89
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c65235930833174c81ed4dc4ef112f3
+      internalID: 459404171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_enemies_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 89
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e0ba6ed423a4641af6a6e0b5eab875
+      internalID: 141669875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-time_enemies_6
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 89
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690234d5c31fd7546932af1b09dba8ba
+      internalID: -328954836
       vertices: []
       indices: 
       edges: []
@@ -181,12 +244,17 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 955ec2770d78b2b4596728c5e4c579d3, type: 3}
+      name: _Emission
     nameFileIdTable:
-      lost-in-time_enemies_0: -1439204907
-      lost-in-time_enemies_1: 1945926167
-      lost-in-time_enemies_2: 1574646210
-      lost-in-time_enemies_3: -690669497
+      lost-in-time_enemies_0: 1523070390
+      lost-in-time_enemies_1: -1691148399
+      lost-in-time_enemies_2: 2025459793
+      lost-in-time_enemies_3: 1446277477
+      lost-in-time_enemies_4: 459404171
+      lost-in-time_enemies_5: 141669875
+      lost-in-time_enemies_6: -328954836
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
         }
         else if (callbackContext.performed && canDoubleJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1.5f);
             canDoubleJump = false;
         }
     }

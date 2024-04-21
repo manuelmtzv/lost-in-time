@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f02dc975f66ecd4a85d6a7415def841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameCamera: {fileID: 0}
   target: {fileID: 7075006264098964142}
+  gameCamera: {fileID: 0}
 --- !u!1 &3694473770593496531
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fc9d285fbd815974698db774a58ee598, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,7 +372,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1945926167, guid: 201f9df913e1fcd47993461aa75554de, type: 3}
+  m_Sprite: {fileID: -1691148399, guid: 201f9df913e1fcd47993461aa75554de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -450,6 +450,7 @@ MonoBehaviour:
   attackDelay: 0.4
   bloodParticles: {fileID: 1391276124535060604, guid: 9e1395892bb0db642bf9e90ed6ca5b75, type: 3}
   healthBar: {fileID: 3972743234892268574}
+  baseSpeed: 0
 --- !u!70 &1942625358648984915
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
