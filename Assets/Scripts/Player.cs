@@ -8,12 +8,12 @@ using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float jumpForce = 8f;
-    [SerializeField] float walkSpeed = 3f;
-    [SerializeField] float runSpeed = 4f;
-    [SerializeField] TimeFlowState timeFlowState;
-    [SerializeField] PlayerState playerState;
-    [SerializeField] SliderBar healthBar;
+    public float jumpForce = 8f;
+    public float walkSpeed = 3f;
+    public float runSpeed = 4f;
+    public TimeFlowState timeFlowState;
+    public PlayerState playerState;
+    public SliderBar healthBar;
     public bool isGrounded;
     private bool isRunning;
     private bool runTrigger;
@@ -117,5 +117,11 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Player is dead");
         }
+    }
+
+    public void Heal(int healAmount)
+    {
+        playerState.health = Mathf.Min(playerState.health + healAmount, playerState.maxHealth);
+        healthBar.SetSliderValue(playerState.health);
     }
 }

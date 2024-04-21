@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     public int health;
     public int damage;
-    public float attackDelay = 0.25f;
+    public float attackDelay = 0.125f;
     public GameObject bloodParticles;
     public GameObject smallBloodParticles;
     public SliderBar healthBar;
