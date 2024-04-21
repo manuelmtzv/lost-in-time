@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public GameObject smallBloodParticles;
     public SliderBar healthBar;
     public float baseSpeed;
+    public GameObject bandage;
     private float attackDelayTimer;
     private bool canMove = true;
     private bool isStunned = false;
@@ -81,9 +82,21 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Instantiate(bloodParticles, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Kill();
         }
+    }
+
+    void Kill()
+    {
+        int bandageDropChance = UnityEngine.Random.Range(0, 100);
+
+        if (bandageDropChance <= 10f)
+        {
+            Instantiate(bandage, transform.position, Quaternion.identity);
+        }
+
+        Instantiate(bloodParticles, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     public void Stun(float duration)
