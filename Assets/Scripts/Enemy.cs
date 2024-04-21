@@ -91,6 +91,7 @@ public class Enemy : MonoBehaviour
     void Kill()
     {
         int bandageDropChance = UnityEngine.Random.Range(0, 100);
+        player.playerState.enemiesKilled++;
 
         if (bandageDropChance <= 5.0f)
         {

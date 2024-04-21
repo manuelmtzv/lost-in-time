@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         animator = GameObject.FindGameObjectWithTag("PlayerBody").GetComponent<Animator>();
         bodyTransform = GameObject.FindGameObjectWithTag("PlayerBody").transform;
 
-        playerState.health = playerState.maxHealth;
+        playerState.Reset();
         healthBar.SetSliderMax(playerState.maxHealth);
     }
 

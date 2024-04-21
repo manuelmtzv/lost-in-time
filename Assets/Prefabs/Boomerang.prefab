@@ -50,6 +50,7 @@ MonoBehaviour:
   boomerangArt: {fileID: 1050087973802882875}
   boomerangState: {fileID: 11400000, guid: f9546dcd70741fd46849b2301f47d740, type: 2}
   timeFlowState: {fileID: 11400000, guid: 8ffaac3797eec1941a25fdfbfa4eeaea, type: 2}
+  playerState: {fileID: 11400000, guid: 1497a3f5887f2d441b0b1510e9c23f0c, type: 2}
 --- !u!58 &-645024773475964183
 CircleCollider2D:
   m_ObjectHideFlags: 0

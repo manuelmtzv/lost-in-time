@@ -12,6 +12,7 @@ public class Boomerang : MonoBehaviour
     [SerializeField] GameObject boomerangArt;
     [SerializeField] BoomerangState boomerangState;
     public TimeFlowState timeFlowState;
+    public PlayerState playerState;
     private Transform startPoint;
     private float timer;
     private int hitsOnReturn = 0;
@@ -64,7 +65,7 @@ public class Boomerang : MonoBehaviour
 
     private Damage CalculateDamage()
     {
-        float critChance = UnityEngine.Random.Range(0f, hitsOnReturn > 1 ? 1.5f : 1.5f + (hitsOnReturn * 0.25f));
+        float critChance = UnityEngine.Random.Range(0f, hitsOnReturn > 1 ? 1.6f : 1.75f + (hitsOnReturn * 0.25f));
         float critMultiplier = hitsOnReturn > 1 ? (boomerangState.critMultiplier * (1 + (hitsOnReturn * 0.075f))) : boomerangState.critMultiplier;
 
         bool isCrit = critChance > 1f;
@@ -72,6 +73,7 @@ public class Boomerang : MonoBehaviour
 
         if (isCrit)
         {
+            Debug.Log("Crit!");
             damage = Mathf.Floor(boomerangState.baseDamage * critChance * critMultiplier);
         }
         else
@@ -94,6 +96,7 @@ public class Boomerang : MonoBehaviour
             Damage damage = CalculateDamage();
             DamagePopup.Generate(collision.transform.position, damage.DamageValue, damage.IsCritical);
             collision.GetComponent<Enemy>().TakeDamage(damage.DamageValue);
+            playerState.damageDealt += damage.DamageValue;
 
             if (boomerangState.state == BoomerangLifeCycle.Returning)
             {
