@@ -449,6 +449,7 @@ MonoBehaviour:
   damage: 0
   attackDelay: 0.4
   bloodParticles: {fileID: 1391276124535060604, guid: 9e1395892bb0db642bf9e90ed6ca5b75, type: 3}
+  smallBloodParticles: {fileID: 1391276124535060604, guid: 6c416f6d4fba0aa4bbdeafe6c1490c81, type: 3}
   healthBar: {fileID: 3972743234892268574}
   baseSpeed: 0
 --- !u!70 &1942625358648984915

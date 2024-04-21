@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public int damage;
     public float attackDelay = 0.25f;
     public GameObject bloodParticles;
+    public GameObject smallBloodParticles;
     public SliderBar healthBar;
     public float baseSpeed;
     private float attackDelayTimer;
@@ -67,6 +68,7 @@ public class Enemy : MonoBehaviour
             if (attackDelayTimer <= 0)
             {
                 player.TakeDamage(10);
+                Instantiate(smallBloodParticles, playerObject.transform.position, Quaternion.identity);
                 attackDelayTimer = attackDelay;
             }
         }
