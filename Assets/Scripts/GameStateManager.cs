@@ -7,9 +7,10 @@ public class GameStateManager : MonoBehaviour
     public PlayerState playerState;
     public GameState gameState;
 
-    void Start()
+    void Awake()
     {
-        gameState.isPaused = false;
+        gameState.ResetState();
+        ResumeGame();
     }
 
     void Update()
@@ -18,12 +19,41 @@ public class GameStateManager : MonoBehaviour
         {
             TogglePauseGame();
         }
+
+        if (playerState.health <= 0)
+        {
+            EndGame();
+        }
     }
 
     public void TogglePauseGame()
     {
-        gameState.isPaused = !gameState.isPaused;
-        Time.timeScale = gameState.isPaused ? 0 : 1;
+        if (gameState.isPaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
+
+    public void PauseGame()
+    {
+        gameState.isPaused = true;
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        gameState.isPaused = false;
+        Time.timeScale = 1;
+    }
+
+    public void EndGame()
+    {
+        gameState.isGameOver = true;
+        PauseGame();
     }
 
     public void RestartGame()

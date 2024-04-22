@@ -6,4 +6,9 @@ public class GameState : ScriptableObject
     public bool isPaused;
     public bool isGameOver;
 
+    public void ResetState()
+    {
+        isPaused = false;
+        isGameOver = false;
+    }
 }
