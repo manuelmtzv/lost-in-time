@@ -16,11 +16,14 @@ public class Boomerang : MonoBehaviour
     private Transform startPoint;
     private float timer;
     private int hitsOnReturn = 0;
+    private float baseDamage;
+    private int enemiesKilledCheckpoint = 0;
 
     void Start()
     {
         timer = boomerangState.throwTime;
         startPoint = GameObject.FindGameObjectWithTag("Player").transform;
+        baseDamage = boomerangState.baseDamage;
         ThrowBoomerang();
     }
 
@@ -49,6 +52,14 @@ public class Boomerang : MonoBehaviour
             boomerangState.state = BoomerangLifeCycle.Idle;
             Destroy(this.gameObject);
         }
+
+        int enemiesKilled = playerState.enemiesKilled;
+
+        if (enemiesKilled >= enemiesKilledCheckpoint + 10)
+        {
+            baseDamage *= 1.025f;
+            enemiesKilledCheckpoint += 10;
+        }
     }
 
     public void ThrowBoomerang()
@@ -73,12 +84,11 @@ public class Boomerang : MonoBehaviour
 
         if (isCrit)
         {
-            Debug.Log("Crit!");
-            damage = Mathf.Floor(boomerangState.baseDamage * critChance * critMultiplier);
+            damage = Mathf.Floor(baseDamage * critChance * critMultiplier);
         }
         else
         {
-            damage = Mathf.Floor(boomerangState.baseDamage);
+            damage = Mathf.Floor(baseDamage);
         }
 
         if (timeFlowState.slowMo)

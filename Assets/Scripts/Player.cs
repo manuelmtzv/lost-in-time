@@ -112,13 +112,6 @@ public class Player : MonoBehaviour
         {
             playerState.health = 0;
         }
-
-        Debug.Log("Player health: " + playerState.health);
-
-        if (playerState.IsDead)
-        {
-            Debug.Log("Player is dead");
-        }
     }
 
     public void Heal(int healAmount)

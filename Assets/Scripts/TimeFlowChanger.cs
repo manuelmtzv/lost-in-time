@@ -13,7 +13,6 @@ public class TimeFlowChanger : MonoBehaviour
     public float colorChangeDuration = 1.0f;
     public SliderBar abilityResourceBar;
     public GameState gameState;
-
     private float startTimescale;
     private float startFixedDeltaTime;
     private float currentTimeAvailable;

@@ -14,8 +14,11 @@ public class SliderBar : MonoBehaviour
 
     public void SetSliderMax(float max)
     {
-        slider.maxValue = max;
-        slider.value = max;
+        if (slider)
+        {
+            slider.maxValue = max;
+            slider.value = max;
+        }
     }
 
     public void SetSliderValue(float value)
