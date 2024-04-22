@@ -12,6 +12,7 @@ public class TimeFlowChanger : MonoBehaviour
     public Color slowMoColor;
     public float colorChangeDuration = 1.0f;
     public SliderBar abilityResourceBar;
+    public GameState gameState;
 
     private float startTimescale;
     private float startFixedDeltaTime;
@@ -34,6 +35,8 @@ public class TimeFlowChanger : MonoBehaviour
 
     void Update()
     {
+        if (gameState.isPaused) return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             timeFlowState.slowMo = !timeFlowState.slowMo;
@@ -69,8 +72,6 @@ public class TimeFlowChanger : MonoBehaviour
             StopSlowMotion();
             targetColor = Color.white;
         }
-
-        // availableTimeText.text = "Time available: " + currentTimeAvailable.ToString("F2");
 
         if (globalLight.color != targetColor)
         {

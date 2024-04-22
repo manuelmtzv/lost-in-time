@@ -86,9 +86,11 @@ public class Player : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext callbackContext)
     {
+        float newJumpForce = timeFlowState.slowMo ? jumpForce * 1.5f : jumpForce * 1.35f;
+
         if (callbackContext.performed && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, timeFlowState.slowMo ? jumpForce * 1.5f : jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, newJumpForce);
             isGrounded = false;
             canDoubleJump = true;
 
@@ -96,7 +98,7 @@ public class Player : MonoBehaviour
         }
         else if (callbackContext.performed && canDoubleJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1.5f);
+            rb.velocity = new Vector2(rb.velocity.x, newJumpForce);
             canDoubleJump = false;
         }
     }
