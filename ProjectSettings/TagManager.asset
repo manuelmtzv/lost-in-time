@@ -8,6 +8,7 @@ TagManager:
   - PlayerBody
   - PlayerBodyPart
   - Enemy
+  - EnemySpawnPoint
   layers:
   - Default
   - TransparentFX

@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine.InputSystem;
 using UnityEngine;
-using UnityEditor.Callbacks;
-using System;
-using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {

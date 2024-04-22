@@ -15,7 +15,7 @@ public class GameStateManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseGame();
         }
@@ -65,7 +65,6 @@ public class GameStateManager : MonoBehaviour
 
     public void QuitGame()
     {
-        EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }

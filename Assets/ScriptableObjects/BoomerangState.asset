@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5980c60690dca6245bf9631159cfae2a, type: 3}
   m_Name: BoomerangState
   m_EditorClassIdentifier: 
-  throwForce: 10
-  returnForce: 12
+  throwForce: 10.5
+  returnForce: 12.5
   rotateForce: 1000
-  throwTime: 0.8
-  baseDamage: 10
-  critMultiplier: 1.75
+  throwTime: 0.85
+  baseDamage: 22
+  critMultiplier: 1.85
   health: 200
-  state: 0
+  state: 2
