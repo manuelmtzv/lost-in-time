@@ -16,7 +16,7 @@ MonoBehaviour:
   returnForce: 12.5
   rotateForce: 1000
   throwTime: 0.85
-  baseDamage: 22
-  critMultiplier: 1.85
+  baseDamage: 26
+  critMultiplier: 1.9
   health: 200
-  state: 2
+  state: 1

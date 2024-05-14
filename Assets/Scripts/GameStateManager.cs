@@ -13,6 +13,11 @@ public class GameStateManager : MonoBehaviour
         ResumeGame();
     }
 
+    void Start()
+    {
+        AudioManager.Instance.PlayMusic(GlobalAssets.Instance.backgroundMusic);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
@@ -53,7 +58,6 @@ public class GameStateManager : MonoBehaviour
     public void EndGame()
     {
         gameState.isGameOver = true;
-        PauseGame();
     }
 
     public void RestartGame()
@@ -61,6 +65,11 @@ public class GameStateManager : MonoBehaviour
         gameState.isPaused = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()

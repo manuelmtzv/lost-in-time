@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4997849285516245965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1343264798363339178}
+  - component: {fileID: 221124510557976814}
+  m_Layer: 0
+  m_Name: GlobalAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1343264798363339178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4997849285516245965}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &221124510557976814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4997849285516245965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05556d8ddbfb7743bfbc5353c553475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePopupPrefab: {fileID: 496890749320656101, guid: 962fe97817c0b2143a372b304016d028, type: 3}
+  sfxEmitterPrefab: {fileID: 6074769669315392940, guid: 4ae00436cb2a28644b01a706bedfc81f, type: 3}
+  musicSource: {fileID: 0}
+  musicDistortionFilter: {fileID: 0}
+  backgroundMusic: {fileID: 8300000, guid: 021d4b2a9e3adf745bfd7a2258ed3f45, type: 3}
+  mainMenuMusic: {fileID: 0}
+  bomerangHitSound: {fileID: 8300000, guid: e7f72e2ac60493048b8ab663849769bd, type: 3}
+  boomerangThrowSound: {fileID: 8300000, guid: 8c81551bac63b2547a8c4af79c6bd542, type: 3}
+  playerDamageSound: {fileID: 8300000, guid: 4058bb99b351b774c965812a3b319476, type: 3}
+  playerDeathSound: {fileID: 8300000, guid: f1ef237ef4dd2bc40ad6cab2c612af55, type: 3}
+  playerJumpSound: {fileID: 8300000, guid: 5cfe073d26aa83f46a6503922f449b4f, type: 3}
+  playerWalkSound: {fileID: 8300000, guid: 8b11e01288862ca48825f780dd0f49f3, type: 3}
+  playerRunSound: {fileID: 8300000, guid: fc8c05ba78ca91948a72ea2c59dad80d, type: 3}
+  playerDoubleJumpSound: {fileID: 8300000, guid: 981a0fd51711a0c47abe3b28323e03ea, type: 3}
+  enemyDeathSoundOne: {fileID: 8300000, guid: 39335e50078b05c44ba4992c8529d76c, type: 3}
+  enemyDeathSoundTwo: {fileID: 8300000, guid: 98850f0a2a661e748ab7aa16cb184ed9, type: 3}
+  missedProyectileSound: {fileID: 8300000, guid: 53f3f4d63d6fcfc42aaa0feb6764d842, type: 3}
+  powerUpSound: {fileID: 8300000, guid: ec4b1d1a795745e4890dd51a985097e8, type: 3}

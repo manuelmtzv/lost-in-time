@@ -18,9 +18,9 @@ TagManager:
   - UI
   - Player
   - EnemyDivider
-  - 
-  - 
-  - 
+  - EnemyProyectile
+  - PlayerBody
+  - Enemy
   - 
   - 
   - 
@@ -54,4 +54,10 @@ TagManager:
     locked: 0
   - name: TextEffects
     uniqueID: 2230904771
+    locked: 0
+  - name: Enemies
+    uniqueID: 3753319175
+    locked: 0
+  - name: Player
+    uniqueID: 134546205
     locked: 0

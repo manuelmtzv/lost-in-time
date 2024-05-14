@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public PlayerState playerState;
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs;
     private readonly List<GameObject> enemySpawnPoints = new();
 
     public float baseSpawnRate = 2.0f;
@@ -24,6 +24,11 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
+        if (playerState.health <= 0)
+        {
+            return;
+        }
+
         if (Time.time >= nextSpawnTime)
         {
             SpawnEnemy();
@@ -48,7 +53,15 @@ public class EnemyManager : MonoBehaviour
     void SpawnEnemy()
     {
         GameObject spawnPoint = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Count)];
+        GameObject enemyPrefab = CalculateNextEnemyPrefab();
 
         Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
+    }
+
+    GameObject CalculateNextEnemyPrefab()
+    {
+        int probability = Random.Range(0, enemyPrefabs.Length);
+
+        return enemyPrefabs[probability];
     }
 }

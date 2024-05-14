@@ -57,6 +57,8 @@ public class TimeFlowChanger : MonoBehaviour
                 StopSlowMotion();
                 targetColor = Color.white;
             }
+
+            globalLight.intensity = 0.00001f;
         }
         else
         {
@@ -70,6 +72,8 @@ public class TimeFlowChanger : MonoBehaviour
             }
             StopSlowMotion();
             targetColor = Color.white;
+
+            globalLight.intensity = 0.005f;
         }
 
         if (globalLight.color != targetColor)

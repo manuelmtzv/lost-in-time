@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 645508144128506757}
   - component: {fileID: 9098341283722628184}
   - component: {fileID: 7433523769995955080}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: EntityHealthUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7423098351907942282}
   - component: {fileID: 7488954305996873913}
   - component: {fileID: 1942625358648984915}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -177,8 +177,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -541648121
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1691148399, guid: 201f9df913e1fcd47993461aa75554de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ee4b9913838424fab23a5596cd1091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerState: {fileID: 11400000, guid: 1497a3f5887f2d441b0b1510e9c23f0c, type: 2}
   state: {fileID: 11400000, guid: 5de5bb5d525394b45b3015e8df56adaf, type: 2}
   speed: 0
   health: 0
@@ -276,7 +277,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -304,9 +305,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5170949235880491416}
     m_Modifications:
+    - target: {fileID: 643615808630683835, guid: 6cec36e8f761ce34096790b0a1edce76, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2875977200147536905, guid: 6cec36e8f761ce34096790b0a1edce76, type: 3}
       propertyPath: m_Name
       value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875977200147536905, guid: 6cec36e8f761ce34096790b0a1edce76, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3730379044770799165, guid: 6cec36e8f761ce34096790b0a1edce76, type: 3}
       propertyPath: target
@@ -399,6 +408,10 @@ PrefabInstance:
     - target: {fileID: 3768682366901824137, guid: 6cec36e8f761ce34096790b0a1edce76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323394939472775685, guid: 6cec36e8f761ce34096790b0a1edce76, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BaseEnemyState
   m_EditorClassIdentifier: 
   minSpeed: 4
-  maxSpeed: 6.5
+  maxSpeed: 6.3
   health: 100
   damage: 10

@@ -25,4 +25,9 @@ public class SliderBar : MonoBehaviour
     {
         slider.value = value;
     }
+
+    public void SetSliderDirection(Slider.Direction direction)
+    {
+        slider.direction = direction;
+    }
 }

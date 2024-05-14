@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.interfaces;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IEnemy
 {
+    public PlayerState playerState;
     public EnemyState state;
     public float speed;
     public int health;
@@ -41,6 +43,8 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (playerState.health <= 0) return;
+
         Vector3 difference = playerObject.transform.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotationZ - 90f);
@@ -88,12 +92,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Kill()
+    public void Kill()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.GetRandomClip(new[] { GlobalAssets.Instance.enemyDeathSoundOne, GlobalAssets.Instance.enemyDeathSoundTwo }), 0.2f);
         int bandageDropChance = UnityEngine.Random.Range(0, 100);
         player.playerState.enemiesKilled++;
 
-        if (bandageDropChance <= 5.0f)
+        if (bandageDropChance <= 1.25f)
         {
             Instantiate(bandage, transform.position, Quaternion.identity);
         }

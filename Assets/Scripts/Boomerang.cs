@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Assets.interfaces;
 
 public class Boomerang : MonoBehaviour
 {
@@ -12,12 +13,19 @@ public class Boomerang : MonoBehaviour
     private int hitsOnReturn = 0;
     private float baseDamage;
     private int enemiesKilledCheckpoint = 0;
+    private AudioSource throwSfxSource;
 
     void Start()
     {
         timer = boomerangState.throwTime;
         startPoint = GameObject.FindGameObjectWithTag("Player").transform;
         baseDamage = boomerangState.baseDamage;
+
+        throwSfxSource = GetComponent<AudioSource>();
+        throwSfxSource.volume = 0.08f;
+        throwSfxSource.pitch = 0.65f;
+        throwSfxSource.clip = GlobalAssets.Instance.boomerangThrowSound;
+
         ThrowBoomerang();
     }
 
@@ -54,11 +62,17 @@ public class Boomerang : MonoBehaviour
             baseDamage *= 1.025f;
             enemiesKilledCheckpoint += 10;
         }
+
+        if (timeFlowState.slowMo)
+        {
+            throwSfxSource.pitch = 0.4f;
+        }
     }
 
     public void ThrowBoomerang()
     {
         boomerangState.state = BoomerangLifeCycle.Thrown;
+        throwSfxSource.Play();
         StartCoroutine(BoomerangTimer());
     }
 
@@ -97,9 +111,11 @@ public class Boomerang : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            AudioManager.Instance.PlaySFX(GlobalAssets.Instance.bomerangHitSound, 0.2f);
             Damage damage = CalculateDamage();
             DamagePopup.Generate(collision.transform.position, damage.DamageValue, damage.IsCritical);
-            collision.GetComponent<Enemy>().TakeDamage(damage.DamageValue);
+
+            collision.GetComponent<IEnemy>().TakeDamage(damage.DamageValue);
             playerState.damageDealt += damage.DamageValue;
 
             if (boomerangState.state == BoomerangLifeCycle.Returning)
